@@ -5,7 +5,11 @@
 
 # clean the data storage
 rm(list= ls())
+
+#Setup hyper parameters
+
 howmany <- 7
+controlSeq <- 'GATTAGT'
 
 data <- read.csv("inputESS3.csv")   #Read in the data from a csv
 data$LNRK <- log(data$RK)
@@ -20,7 +24,7 @@ for (i in 1:howmany){
     k <- k+1
   }
 }
-controlSeq <- 'GATTAGT'
+
 
 controlSeq <- unlist(strsplit(controlSeq, ''))
 control <- c()
@@ -49,7 +53,7 @@ for (i in 1:(howmany-1)){
   for (j in 1:4){
     for (q in (i+1):howmany){
       for(p in 1:4){
-        
+
           IC.command[k] <- paste(nucleotides[j],i,nucleotides[p],q,'<-',nucleotides[j],i,'*',nucleotides[p],q,sep = '')
           IC.comb[k] <- paste(nucleotides[j],i,nucleotides[p],q,sep = '')
           k <- k+1
@@ -79,7 +83,7 @@ eval(parse(text = command.a))
 DINUCINT <- c()
 TVAL <- c()
 
-#generate the command 
+#generate the command
 command.a <- 'lm1 <- lm(LNRK ~'
 for (i in 1:(length(combination))){
   command.a <- paste(command.a, combination[i], '+')
@@ -88,7 +92,7 @@ command.b <- paste(command.a, 'DF[,n] )')
 for(n in 1:length(DF)){   #for each interaction term
        #regress reaction rate on each base-position variable, and 1 interaction term
   eval(parse(text = command.b))
-  DINUCINT[n] <- mean(coefficients(lm1)[length(coefficients(lm1))])       #store the effect size of the interaction term 
+  DINUCINT[n] <- mean(coefficients(lm1)[length(coefficients(lm1))])       #store the effect size of the interaction term
   if(length(summary(lm1)$coefficients[,3] >= length(coefficients(lm1)))){
     TVAL[n] <- summary(lm1)$coefficients[length(summary(lm1)$coefficients[,3]),3]
   }else{
@@ -116,7 +120,7 @@ for (i in 1:(length(combination))){
 
 commandf <- paste(command2, command1,", data = dataForlm)",sep = "")
 eval(parse(text = commandf))
-#Fill in DF[,1] + DF[,10] ... with the indices given to you by the which command.  
+#Fill in DF[,1] + DF[,10] ... with the indices given to you by the which command.
 #These happen to be the ones from this model
 
 
