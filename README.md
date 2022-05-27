@@ -5,18 +5,16 @@ Position weight matrix (PWM) has been widely applied to describe nucleotide impo
 
 Like PWM, we implement PWM+IC by a linear regression model in R. We add interaction terms into the PWM linear model and do the fitting. The coefficients of each term is extracted and used to describe the rules of RNA/DNA - protein interaction.
 
-In this repository, ___ is the original PWM + IC model file. We mamunaly add the interaction terms into the linear model. But once we have different protein to analyse, it loses the convenience. Therefore the _____ file solves this issue.
+In this repository, *Original_Anderson_PWM_IC.R* is the original PWM + IC model file. We mamunaly add the interaction terms into the linear model. But once we have different protein to analyse, it loses the convenience. Therefore the *PWM_IC.R* file solves this issue.
 
 ## How to use
-### Generate a character table
-
+### Prepare your input files
 
 ### Check the format of the character table
 
 ### Run the R code
 
 ### Visualize your result to explore the interaction rules
-
 
 ## Referece and citation
 If this work is useful to you, it would be great if you can cite my article.
