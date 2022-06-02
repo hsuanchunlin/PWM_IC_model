@@ -11,10 +11,14 @@ In this repository, *Original_Anderson_PWM_IC.R* is the original PWM + IC model 
 
 ```mermaid
 graph LR;
-	RKA binding profile in .csv-->make_chr_table.R
-	make_chr_table.R-->chr_table.csv
-	chr_table.csv-->PWM.R
-	chr_table.csv-->RWM_IC.R-->Export
+	A[RKA binding profile in .csv]-->B[make_chr_table.R];
+	B -- generate --> C[chr_table.csv];
+	C --> D[PWM.R];
+	C --> E[RWM_IC.R];
+	E -- Export --> F[demo_heat.csv];
+	E -- Export --> G[demo_model4_real_number.csv];
+	F -- heatmap_for_IC.R --> H[Heatmap]
+	G -- heatmap_model4.R --> I[Heatmap]
 ```
 
 ### Prepare your input files
