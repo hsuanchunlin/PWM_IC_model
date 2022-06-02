@@ -9,10 +9,12 @@ In this repository, *Original_Anderson_PWM_IC.R* is the original PWM + IC model 
 
 ## How to use
 
+```mermaid
 graph LR;
 	A-->B
 	A-->C
-	
+```
+
 ### Prepare your input files
 Please refer to [demo_data.csv](demo_data.csv) for the information. The data should look like:
 
