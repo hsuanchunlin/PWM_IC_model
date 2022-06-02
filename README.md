@@ -8,6 +8,11 @@ Like PWM, we implement PWM+IC by a linear regression model in R. We add interact
 In this repository, *Original_Anderson_PWM_IC.R* is the original PWM + IC model file. We mamunaly add the interaction terms into the linear model. But once we have different protein to analyse, it loses the convenience. Therefore the *PWM_IC.R* file solves this issue.
 
 ## How to use
+
+graph LR;
+	A-->B
+	A-->C
+	
 ### Prepare your input files
 Please refer to [demo_data.csv](demo_data.csv) for the information. The data should look like:
 
