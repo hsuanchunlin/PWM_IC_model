@@ -8,10 +8,10 @@ rm(list= ls())
 
 #Setup hyper parameters
 
-howmany <- 7
-controlSeq <- 'GATTAGT'
+howmany <- 6
+controlSeq <- 'AAAAAG'
 
-data <- read.csv("inputESS3.csv")   #Read in the data from a csv
+data <- read.csv("chr_table.csv")   #Read in the data from a csv
 data$LNRK <- log(data$RK)
 attach(data)                                #Attach the column headers to the data as variable names
 #Automatic generate the pair
@@ -198,5 +198,5 @@ model4.coef$X1 <- paste(C,substr(model4.coef[,2],1,1),sep = "")
 D<- -(as.numeric(substr(model4.coef[,2],4,4))+2)
 model4.coef$X2 <- paste(D,substr(model4.coef[,2],3,3),sep = "")
 model4.coef$X2[model4.coef$X2 == "NA"] <- model4.coef$X1[model4.coef$X2 == "NA"]
-write.csv(matrix2, "ESS3_heat.csv")
-write.csv(model4.coef, "model4_real_number.csv")
+write.csv(matrix2, "demo_heat.csv")
+write.csv(model4.coef, "demo_model4_real_number.csv")

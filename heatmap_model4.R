@@ -1,5 +1,5 @@
 library(ggplot2)
-BcKINB <- read.csv("pop50_model4.csv")
+BcKINB <- read.csv("demo_model4_real_number.csv")
 BcKINB[is.na(BcKINB)] <- 0
 
 (p <- ggplot(BcKINB,aes(X2,X1))

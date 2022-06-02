@@ -18,7 +18,11 @@ input_matrix <- cbind(input_matrix_1,input_matrix_2,input_matrix_3, input_matrix
                       input_matrix_5,input_matrix_6) %>% data.frame()
 #change colname
 colnames_list <- colnames(input_matrix)
-colnames(input_matrix) <- substr(colnames_list, start=2, stop=3)
+colnames(input_matrix) <- paste(substr(colnames_list, start=3, stop=3),
+                                substr(colnames_list, start=2, stop=2),
+                                sep = "")
 
 input_matrix <- cbind(data, input_matrix)
 rownames(input_matrix) <- input_matrix$Sequence
+
+write.csv(input_matrix, "chr_table.csv")

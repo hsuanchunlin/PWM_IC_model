@@ -1,8 +1,8 @@
-#library(ggplot2)
+library(ggplot2)
 
-hm <- read.csv("popAvgMaha.csv")
+hm <- read.csv("demo_heat.csv")
 
-pdf("heatmap_eaAvgMaha.pdf", 10,8)
+pdf("heatmap_demo.pdf", 10,8)
 (p <- ggplot(hm,aes(X2,X1))
  +geom_tile(aes(fill = DINUCINT),colour = "gray")
  +scale_fill_gradient2(low="steelblue",mid="white",

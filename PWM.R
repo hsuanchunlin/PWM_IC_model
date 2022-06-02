@@ -2,9 +2,9 @@
 #load the data
 # clean the data storage
 rm(list= ls())
-howmany <- 7
+howmany <- 6
 
-data <- read.csv("sc2_qc.csv")   #Read in the data from a csv
+data <- read.csv("chr_table.csv")   #Read in the data from a csv
 data$LNRK <- log(data$RK)
 attach(data)                                #Attach the column headers to the data as variable names
 #Automatic generate the pair
