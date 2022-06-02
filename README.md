@@ -11,8 +11,10 @@ In this repository, *Original_Anderson_PWM_IC.R* is the original PWM + IC model 
 
 ```mermaid
 graph LR;
-	A-->B
-	A-->C
+	RKA binding profile in .csv-->make_chr_table.R
+	make_chr_table.R-->chr_table.csv
+	chr_table.csv-->PWM.R
+	chr_table.csv-->RWM_IC.R-->Export
 ```
 
 ### Prepare your input files
