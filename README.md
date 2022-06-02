@@ -54,6 +54,3 @@ Please change **demo_heat.csv** and **demo_model4_real_number.csv** to your pref
 Now you can use **heatmap_for_IC.R** and import **demo_heat.csv** or your filename to visualize the PWM+IC for your protein.
 
 **heatmap_model4.R** is to visualize the **demo_model4_real_number.csv** file for stepwised result.
-
-## Referece and citation
-If this work is useful to you, it would be great if you can cite my article.
