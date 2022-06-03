@@ -10,8 +10,8 @@ pdf("heatmap_demo.pdf", 10,8)
                        na.value = "grey50", guide = "colourbar",
                        name = "HiTS-EQ")
  +theme_bw()
- + theme(text = element_text(size=20),
-         axis.text= element_text(size=20,colour="black"))
+ + theme(text = element_text(size=10),
+         axis.text= element_text(size=10,colour="black"))
  +labs(size= 20,
        x = "",
        y = ""))
