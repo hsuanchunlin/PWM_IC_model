@@ -1,5 +1,7 @@
 # Application of Position weight matrix plus interaction couple (PWM+IC) to predict RNA/DNA - protein interaction using high-throughput result
 
+Hsuan-Chun Lin 2015
+
 ## Purpose
 Position weight matrix (PWM) has been widely applied to describe nucleotide importance of RNA/DNA - protein interaction. The basic assumption of PWM is that each necleotide does not interact and follows the iid rule in statistics. Which means PWM has limited ability to detected the mutual effects of nucleotides. For example, RNA/DNA have secondary structures and sometimes specific nucleotide pairs in neighbor or separate positions may enhance or decrease the interaction. Therefore we put interaction couple (IC) and trying to describe this phenomenoum, and this is PWM+PC method.
 
