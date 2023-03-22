@@ -2,6 +2,8 @@
 
 Hsuan-Chun Lin 2015
 
+I would like to thank David R. Anderson for sharing me the R codes from his Nature paper which inspired this project and gave me the opportunity to dig into Machine learning and statistics.
+
 ## Purpose
 Position weight matrix (PWM) has been widely applied to describe nucleotide importance of RNA/DNA - protein interaction. The basic assumption of PWM is that each necleotide does not interact and follows the iid rule in statistics. Which means PWM has limited ability to detected the mutual effects of nucleotides. For example, RNA/DNA have secondary structures and sometimes specific nucleotide pairs in neighbor or separate positions may enhance or decrease the interaction. Therefore we put interaction couple (IC) and trying to describe this phenomenoum, and this is PWM+PC method.
 
@@ -60,3 +62,7 @@ Please change **demo_heat.csv** and **demo_model4_real_number.csv** to your pref
 Now you can use **heatmap_for_IC.R** and import **demo_heat.csv** or your filename to visualize the PWM+IC for your protein.
 
 **heatmap_model4.R** is to visualize the **demo_model4_real_number.csv** file for stepwised result.
+
+#References
+- Hidden specificity in an apparently nonspecific RNA-binding protein, Ulf-Peter Guenther, Lindsay E Yandek, Courtney N Niland, Frank E Campbell, **David Anderson**, Vernon E Anderson, Michael E Harris, Eckhard Jankowsky *Nature* 2013 Oct 17;502(7471):385-8.
+- Analysis of the RNA Binding Specificity Landscape of C5 Protein Reveals Structure and Sequence Preferences that Direct RNase P Specificity Hsuan-Chun Lin, Jing Zhao, Courtney N Niland, Brandon Tran, Eckhard Jankowsky, Michael E Harris *Cell Chem Biol*. 2016 Oct 20;23(10):1271-1281.
