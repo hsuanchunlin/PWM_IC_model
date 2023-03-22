@@ -63,6 +63,6 @@ Now you can use **heatmap_for_IC.R** and import **demo_heat.csv** or your filena
 
 **heatmap_model4.R** is to visualize the **demo_model4_real_number.csv** file for stepwised result.
 
-#References
+# References
 - Hidden specificity in an apparently nonspecific RNA-binding protein, Ulf-Peter Guenther, Lindsay E Yandek, Courtney N Niland, Frank E Campbell, **David Anderson**, Vernon E Anderson, Michael E Harris, Eckhard Jankowsky *Nature* 2013 Oct 17;502(7471):385-8.
 - Analysis of the RNA Binding Specificity Landscape of C5 Protein Reveals Structure and Sequence Preferences that Direct RNase P Specificity Hsuan-Chun Lin, Jing Zhao, Courtney N Niland, Brandon Tran, Eckhard Jankowsky, Michael E Harris *Cell Chem Biol*. 2016 Oct 20;23(10):1271-1281.
